@@ -11,6 +11,8 @@ import fr.jhelp.kotlinLightSamples.delayTask
 import fr.jhelp.kotlinLightSamples.launchTask
 import fr.jhelp.kotlinLightSamples.testDoWhile
 import fr.jhelp.kotlinLightSamples.testWhile
+import fr.jhelp.kotlinLightSamples.whenWithParameter
+import fr.jhelp.kotlinLightSamples.whenWithoutParameter
 
 fun main()
 {
@@ -133,6 +135,15 @@ fun main()
 
     testWhile()
     testDoWhile()
+
+    whenWithParameter(25)
+    whenWithParameter(666)
+    whenWithParameter(7777777)
+
+    whenWithoutParameter(2, "rer")
+    whenWithoutParameter(25, "")
+    whenWithoutParameter(5, "")
+    whenWithoutParameter(55, "Ploki")
 
     for (count in 0 until 10000000)
     {

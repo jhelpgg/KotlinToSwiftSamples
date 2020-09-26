@@ -112,6 +112,24 @@ func main()
     let companionTest = CompanionTest()
     companionTest.instanceMethod()
 
+    let car1 = Car("DeLorean", 1985)
+    let car2 = Car("Tesla")
+
+    print("car1 : \(car1.model) ; \(car1.year)")
+    print("car2 : \(car2.model) ; \(car2.year)")
+
+    testWhile()
+    testDoWhile()
+
+    whenWithParameter(25)
+    whenWithParameter(666)
+    whenWithParameter(7777777)
+
+    whenWithoutParameter(2, "rer")
+    whenWithoutParameter(25, "")
+    whenWithoutParameter(5, "")
+    whenWithoutParameter(55, "Ploki")
+
     for count in 0 ..< 10000000
     {
 
