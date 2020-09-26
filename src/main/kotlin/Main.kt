@@ -3,6 +3,7 @@ import fr.jhelp.kotlinLight.CommonMap
 import fr.jhelp.kotlinLight.Mutex
 import fr.jhelp.kotlinLight.Try
 import fr.jhelp.kotlinLightSamples.Apple
+import fr.jhelp.kotlinLightSamples.Car
 import fr.jhelp.kotlinLightSamples.CompanionTest
 import fr.jhelp.kotlinLightSamples.IntToString
 import fr.jhelp.kotlinLightSamples.Queue
@@ -121,6 +122,12 @@ fun main()
     CompanionTest.staticMethod()
     val companionTest = CompanionTest()
     companionTest.instanceMethod()
+
+    val car1 = Car("DeLorean", 1985)
+    val car2 = Car("Tesla")
+
+    println("car1 : ${car1.model} ; ${car1.year}")
+    println("car2 : ${car2.model} ; ${car2.year}")
 
     for (count in 0 until 10000000)
     {
