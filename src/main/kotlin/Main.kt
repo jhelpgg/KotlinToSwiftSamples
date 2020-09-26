@@ -9,6 +9,8 @@ import fr.jhelp.kotlinLightSamples.IntToString
 import fr.jhelp.kotlinLightSamples.Queue
 import fr.jhelp.kotlinLightSamples.delayTask
 import fr.jhelp.kotlinLightSamples.launchTask
+import fr.jhelp.kotlinLightSamples.testDoWhile
+import fr.jhelp.kotlinLightSamples.testWhile
 
 fun main()
 {
@@ -128,6 +130,9 @@ fun main()
 
     println("car1 : ${car1.model} ; ${car1.year}")
     println("car2 : ${car2.model} ; ${car2.year}")
+
+    testWhile()
+    testDoWhile()
 
     for (count in 0 until 10000000)
     {
