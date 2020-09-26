@@ -130,6 +130,13 @@ func main()
     whenWithoutParameter(5, "")
     whenWithoutParameter(55, "Ploki")
 
+    var status = Status.DISCONNECTED
+    print("\(status)")
+    status = Status.CONNECTING
+    print("\(status)")
+    status = Status.CONNECTED
+    print("\(status)")
+
     for count in 0 ..< 10000000
     {
 

@@ -7,6 +7,7 @@ import fr.jhelp.kotlinLightSamples.Car
 import fr.jhelp.kotlinLightSamples.CompanionTest
 import fr.jhelp.kotlinLightSamples.IntToString
 import fr.jhelp.kotlinLightSamples.Queue
+import fr.jhelp.kotlinLightSamples.Status
 import fr.jhelp.kotlinLightSamples.delayTask
 import fr.jhelp.kotlinLightSamples.launchTask
 import fr.jhelp.kotlinLightSamples.testDoWhile
@@ -144,6 +145,13 @@ fun main()
     whenWithoutParameter(25, "")
     whenWithoutParameter(5, "")
     whenWithoutParameter(55, "Ploki")
+
+    var status = Status.DISCONNECTED
+    println("$status")
+    status = Status.CONNECTING
+    println("$status")
+    status = Status.CONNECTED
+    println("$status")
 
     for (count in 0 until 10000000)
     {
