@@ -2,6 +2,8 @@
 class CompanionTest {
 
     
+        static var before = "before"
+
         /**
          * Wonderful world }}}}
          */
@@ -12,6 +14,8 @@ class CompanionTest {
         }
 
         // ploki { {{{{
+
+        static let after = "after"
     
 
     func instanceMethod()

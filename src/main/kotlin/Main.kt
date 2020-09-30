@@ -153,6 +153,13 @@ fun main()
     status = Status.CONNECTED
     println("$status")
 
+    var value = 0
+    println("value=$value")
+    value++
+    println("value=$value")
+    value--
+    println("value=$value")
+
     for (count in 0 until 10000000)
     {
 

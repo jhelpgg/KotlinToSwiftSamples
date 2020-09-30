@@ -137,6 +137,13 @@ func main()
     status = Status.CONNECTED
     print("\(status)")
 
+    var value = 0
+    print("value=\(value)")
+    value += 1
+    print("value=\(value)")
+    value -= 1
+    print("value=\(value)")
+
     for count in 0 ..< 10000000
     {
 

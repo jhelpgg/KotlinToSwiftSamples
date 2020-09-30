@@ -4,6 +4,8 @@ class CompanionTest
 {
     companion object
     {
+        var before = "before"
+
         /**
          * Wonderful world }}}}
          */
@@ -14,6 +16,8 @@ class CompanionTest
         }
 
         // ploki { {{{{
+
+        val after = "after"
     }
 
     fun instanceMethod()
