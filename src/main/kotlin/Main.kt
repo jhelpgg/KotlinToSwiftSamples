@@ -10,6 +10,12 @@ import fr.jhelp.kotlinLightSamples.Queue
 import fr.jhelp.kotlinLightSamples.Status
 import fr.jhelp.kotlinLightSamples.delayTask
 import fr.jhelp.kotlinLightSamples.launchTask
+import fr.jhelp.kotlinLightSamples.readDouble
+import fr.jhelp.kotlinLightSamples.readFloat
+import fr.jhelp.kotlinLightSamples.readInt16
+import fr.jhelp.kotlinLightSamples.readInt32
+import fr.jhelp.kotlinLightSamples.readInt64
+import fr.jhelp.kotlinLightSamples.readInt8
 import fr.jhelp.kotlinLightSamples.testDoWhile
 import fr.jhelp.kotlinLightSamples.testWhile
 import fr.jhelp.kotlinLightSamples.whenWithParameter
@@ -159,6 +165,20 @@ fun main()
     println("value=$value")
     value--
     println("value=$value")
+
+    println("--------------------")
+    readInt8()
+    println("--------------------")
+    readInt16()
+    println("--------------------")
+    readInt32()
+    println("--------------------")
+    readInt64()
+    println("--------------------")
+    readFloat()
+    println("--------------------")
+    readDouble()
+    println("--------------------")
 
     for (count in 0 until 10000000)
     {
