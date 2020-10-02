@@ -8,8 +8,7 @@ import fr.jhelp.kotlinLightSamples.CompanionTest
 import fr.jhelp.kotlinLightSamples.IntToString
 import fr.jhelp.kotlinLightSamples.Queue
 import fr.jhelp.kotlinLightSamples.Status
-import fr.jhelp.kotlinLightSamples.delayTask
-import fr.jhelp.kotlinLightSamples.launchTask
+import fr.jhelp.kotlinLightSamples.promiseTest
 import fr.jhelp.kotlinLightSamples.readDouble
 import fr.jhelp.kotlinLightSamples.readFloat
 import fr.jhelp.kotlinLightSamples.readInt16
@@ -20,6 +19,8 @@ import fr.jhelp.kotlinLightSamples.testDoWhile
 import fr.jhelp.kotlinLightSamples.testWhile
 import fr.jhelp.kotlinLightSamples.whenWithParameter
 import fr.jhelp.kotlinLightSamples.whenWithoutParameter
+import fr.jhelp.kotlinLigthTools.tasks.delayTask
+import fr.jhelp.kotlinLigthTools.tasks.launchTask
 
 fun main()
 {
@@ -179,6 +180,8 @@ fun main()
     println("--------------------")
     readDouble()
     println("--------------------")
+
+    promiseTest()
 
     for (count in 0 until 10000000)
     {

@@ -158,6 +158,8 @@ func main()
     readDouble()
     print(" -= 1 -= 1 -= 1 -= 1 -= 1 -= 1 -= 1 -= 1 -= 1 -= 1")
 
+    promiseTest()
+
     for count in 0 ..< 10000000
     {
 

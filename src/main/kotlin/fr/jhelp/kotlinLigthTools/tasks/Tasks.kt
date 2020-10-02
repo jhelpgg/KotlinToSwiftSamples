@@ -1,11 +1,11 @@
-package fr.jhelp.kotlinLightSamples
+package fr.jhelp.kotlinLigthTools.tasks
 
 import fr.jhelp.kotlinLight.DispatchQueue
 import fr.jhelp.kotlinLight.DispatchTime
 import fr.jhelp.kotlinLight.DispatchTimeInterval
 import fr.jhelp.kotlinLight.ImportSwift
 
-@ImportSwift("Dispatch")
+@ImportSwift("Foundation")
 
 fun launchTask(task: () -> Unit)
 {
