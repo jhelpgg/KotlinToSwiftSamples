@@ -3,11 +3,11 @@ open class Vehicule {
 
     let year : Int
 
-    init(_ year:Int){
+    public init(_ year:Int){
         self.year = year
     }
 
-    init(){
+    public init(){
         self.year = 2020
     }
 }

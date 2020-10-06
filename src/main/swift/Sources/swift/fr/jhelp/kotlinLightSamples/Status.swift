@@ -1,5 +1,5 @@
 
-enum Status
+public enum Status
 {
    case 
     DISCONNECTED,

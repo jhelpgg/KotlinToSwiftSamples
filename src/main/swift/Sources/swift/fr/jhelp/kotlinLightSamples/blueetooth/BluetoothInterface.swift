@@ -1,5 +1,5 @@
 
-protocol BluetoothInterface {
+public protocol BluetoothInterface {
 
     func initialize()
 

@@ -1,7 +1,7 @@
 
-class Apple : Fruit {
+public class Apple : Fruit {
 
-    func sugarValue() -> Int
+    public func sugarValue() -> Int
     {
         return 42
     }

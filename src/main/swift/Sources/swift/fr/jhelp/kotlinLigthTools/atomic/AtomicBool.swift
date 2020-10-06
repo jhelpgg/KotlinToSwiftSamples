@@ -1,28 +1,28 @@
 
 
-class AtomicBool {
+public class AtomicBool {
 
     private let mutex: Mutex
     private var value: Bool
 
-    init(_ value: Bool){
+    public init(_ value: Bool){
         self.mutex = Mutex()
         self.value = value
     }
 
-    func get() -> Bool
+    public func get() -> Bool
     {
         var value = false
         self.mutex.safeExecute { value = self.value }
         return value
     }
 
-    func set(_ value: Bool)
+    public func set(_ value: Bool)
     {
         self.mutex.safeExecute { self.value = value }
     }
 
-    func getAndSet(_ newValue: Bool) -> Bool
+    public func getAndSet(_ newValue: Bool) -> Bool
     {
         var value = false
 
@@ -34,7 +34,7 @@ class AtomicBool {
         return value
     }
 
-    func compareAndSet(_ excepted: Bool, _ newValue: Bool) -> Bool
+    public func compareAndSet(_ excepted: Bool, _ newValue: Bool) -> Bool
     {
         var done = false
 

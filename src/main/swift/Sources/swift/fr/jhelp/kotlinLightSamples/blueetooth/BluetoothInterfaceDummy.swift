@@ -1,22 +1,22 @@
 
-class BluetoothInterfaceDummy : BluetoothInterface {
+public class BluetoothInterfaceDummy : BluetoothInterface {
 
-    func initialize()
+    public func initialize()
     {
         print("TODO : Inject BluetoothInterface")
     }
 
-    func startScan(_ scanReceiver: @escaping  (BluetoothDevice) -> Void)
+    public func startScan(_ scanReceiver: @escaping  (BluetoothDevice) -> Void)
     {
         print("TODO : Inject BluetoothInterface")
     }
 
-    func stoScan()
+    public func stoScan()
     {
         print("TODO : Inject BluetoothInterface")
     }
 
-    func connect(_ device: BluetoothDevice)
+    public func connect(_ device: BluetoothDevice)
     {
         print("TODO : Inject BluetoothInterface")
     }

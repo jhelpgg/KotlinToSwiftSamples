@@ -1,5 +1,5 @@
 
-enum FutureStatus
+public enum FutureStatus
 {
    case 
     COMPUTING,

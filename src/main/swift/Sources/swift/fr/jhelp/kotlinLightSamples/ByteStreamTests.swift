@@ -1,6 +1,6 @@
 
 
-func readInt8()
+public func readInt8()
 {
     var bytes = Array<Byte>()
     bytes.append(0.toByte())
@@ -48,7 +48,7 @@ func readInt8()
     print("data=\(data)")
 }
 
-func readInt16()
+public func readInt16()
 {
     var bytes = Array<Byte>()
     bytes.append(0.toByte())
@@ -80,7 +80,7 @@ func readInt16()
     print("data=\(data)")
 }
 
-func readInt32()
+public func readInt32()
 {
     var bytes = Array<Byte>()
     bytes.append(0.toByte())
@@ -104,7 +104,7 @@ func readInt32()
     print("data=\(data)")
 }
 
-func readInt64()
+public func readInt64()
 {
     var bytes = Array<Byte>()
     bytes.append(0.toByte())
@@ -124,7 +124,7 @@ func readInt64()
     print("data=\(data)")
 }
 
-func readFloat()
+public func readFloat()
 {
     var bytes = Array<Byte>()
     bytes.append(0.toByte())
@@ -148,7 +148,7 @@ func readFloat()
     print("data=\(data)")
 }
 
-func readDouble()
+public func readDouble()
 {
     var bytes = Array<Byte>()
     bytes.append(0.toByte())

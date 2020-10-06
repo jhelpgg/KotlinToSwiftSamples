@@ -1,5 +1,5 @@
 
-func main()
+public func main()
 {
     delayTask(16) { print("some time after") }
 

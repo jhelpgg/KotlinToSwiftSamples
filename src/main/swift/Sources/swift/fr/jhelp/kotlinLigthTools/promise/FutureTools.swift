@@ -1,5 +1,5 @@
 
-func unwrap <T>(_ future: Future<Future<T>>) -> Future<T>
+public func unwrap <T>(_ future: Future<Future<T>>) -> Future<T>
 {
     let promise = Promise<T>()
 
@@ -18,14 +18,14 @@ func unwrap <T>(_ future: Future<Future<T>>) -> Future<T>
     return promise.getFuture()
 }
 
-func futureValue <T>(_ value:T) -> Future<T>
+public func futureValue <T>(_ value:T) -> Future<T>
 {
     let promise = Promise<T>()
     promise.result(value)
     return promise.getFuture()
 }
 
-func futureFailed <T>(_ error:String) -> Future<T>
+public func futureFailed <T>(_ error:String) -> Future<T>
 {
     let promise = Promise<T>()
     promise.error(error)

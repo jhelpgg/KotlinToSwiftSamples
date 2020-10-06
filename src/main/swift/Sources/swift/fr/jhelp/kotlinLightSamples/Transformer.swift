@@ -1,5 +1,5 @@
 
-protocol Transformer {
+public protocol Transformer {
      associatedtype Transformer_S
      associatedtype Transformer_D
 

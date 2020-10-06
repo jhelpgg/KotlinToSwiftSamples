@@ -1,5 +1,5 @@
 
-class CompanionTest {
+public class CompanionTest {
 
     
         static var before = "before"
@@ -7,7 +7,7 @@ class CompanionTest {
         /**
          * Wonderful world }}}}
          */
-        static func staticMethod()
+        public static func staticMethod()
         {
             let k = "}"
             print("static {{{{{ \(k)")
@@ -18,7 +18,7 @@ class CompanionTest {
         static let after = "after"
     
 
-    func instanceMethod()
+    public func instanceMethod()
     {
         let l = "\n"
         let m = "\u{00af}"

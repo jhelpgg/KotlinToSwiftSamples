@@ -1,6 +1,6 @@
 
 
-func promiseTest()
+public func promiseTest()
 {
     let promise = Promise<Int>()
     promise.getFuture()

@@ -1,28 +1,28 @@
 
 
-class AtomicInt {
+public class AtomicInt {
 
     private let mutex: Mutex
     private var value: Int
 
-    init(_ value: Int){
+    public init(_ value: Int){
         self.mutex = Mutex()
         self.value = value
     }
 
-    func get() -> Int
+    public func get() -> Int
     {
         var value = 0
         self.mutex.safeExecute { value = self.value }
         return value
     }
 
-    func set(_ value: Int)
+    public func set(_ value: Int)
     {
         self.mutex.safeExecute { self.value = value }
     }
 
-    func getAndSet(_ newValue: Int) -> Int
+    public func getAndSet(_ newValue: Int) -> Int
     {
         var value = 0
 
@@ -34,7 +34,7 @@ class AtomicInt {
         return value
     }
 
-    func compareAndSet(_ excepted: Int, _ newValue: Int) -> Bool
+    public func compareAndSet(_ excepted: Int, _ newValue: Int) -> Bool
     {
         var done = false
 
@@ -49,7 +49,7 @@ class AtomicInt {
         return done
     }
 
-    func incrementAndGet() -> Int
+    public func incrementAndGet() -> Int
     {
         var value = 0
 
@@ -61,7 +61,7 @@ class AtomicInt {
         return value
     }
 
-    func getAndIncrement() -> Int
+    public func getAndIncrement() -> Int
     {
         var value = 0
 
@@ -73,7 +73,7 @@ class AtomicInt {
         return value
     }
 
-    func decrementAndGet() -> Int
+    public func decrementAndGet() -> Int
     {
         var value = 0
 
@@ -85,7 +85,7 @@ class AtomicInt {
         return value
     }
 
-    func getAndDecrement() -> Int
+    public func getAndDecrement() -> Int
     {
         var value = 0
 

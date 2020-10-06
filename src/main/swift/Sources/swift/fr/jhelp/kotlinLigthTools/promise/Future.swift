@@ -1,6 +1,6 @@
 
 
-class Future<T> {
+public class Future<T> {
 
     private let promise: Promise<T>
     private let futureStatus: AtomicReference<FutureStatus>
@@ -18,27 +18,27 @@ class Future<T> {
         self.continuations = Array<() -> Void>()
     }
 
-    func status() -> FutureStatus
+    public func status() -> FutureStatus
     {
         return self.futureStatus.get()!
     }
 
-    func getResult() -> T?
+    public func getResult() -> T?
     {
         return self.result
     }
 
-    func getError() -> String
+    public func getError() -> String
     {
         return self.error
     }
 
-    func getCancelReason() -> String?
+    public func getCancelReason() -> String?
     {
         return self.promise.getCancelReason()
     }
 
-    func cancel(_ reason: String)
+    public func cancel(_ reason: String)
     {
         if self.futureStatus.get() == FutureStatus.COMPUTING
         {
@@ -48,7 +48,7 @@ class Future<T> {
         }
     }
 
-    func andThen <T1>(_ continuation: @escaping  (T) -> T1) -> Future<T1>
+    public func andThen <T1>(_ continuation: @escaping  (T) -> T1) -> Future<T1>
     {
         let promise = Promise<T1>()
         let action: () -> Void = {
@@ -85,7 +85,7 @@ class Future<T> {
         return promise.getFuture()
     }
 
-    func then <T1>(_ continuation: @escaping  (Future<T>) -> T1) -> Future<T1>
+    public func then <T1>(_ continuation: @escaping  (Future<T>) -> T1) -> Future<T1>
     {
         let promise = Promise<T1>()
         let action: () -> Void = {
@@ -110,12 +110,12 @@ class Future<T> {
         return promise.getFuture()
     }
 
-    func andThenUnwrap <T1>(_ continuation: @escaping  (T) -> Future<T1>) -> Future<T1>
+    public func andThenUnwrap <T1>(_ continuation: @escaping  (T) -> Future<T1>) -> Future<T1>
     {
         return unwrap(self.andThen(continuation))
     }
 
-    func thenUnwrap <T1>(_ continuation: @escaping  (Future<T>) -> Future<T1>) -> Future<T1>
+    public func thenUnwrap <T1>(_ continuation: @escaping  (Future<T>) -> Future<T1>) -> Future<T1>
     {
         return unwrap(self.then(continuation))
     }

@@ -1,5 +1,5 @@
 
-func whenWithParameter(_ parameter: Int)
+public func whenWithParameter(_ parameter: Int)
 {
     switch parameter
     {
@@ -17,7 +17,7 @@ func whenWithParameter(_ parameter: Int)
     }
 }
 
-func whenWithoutParameter(_ integer: Int, _ string: String)
+public func whenWithoutParameter(_ integer: Int, _ string: String)
 {
     
         if integer == 5 { print("FIVE")

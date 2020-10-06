@@ -1,21 +1,21 @@
 
 
-class Queue<T> {
+public class Queue<T> {
 
     private var head: Element<T>?
     private var tail: Element<T>?
 
-    init(){
+    public init(){
         self.head = nil
         self.tail = nil
     }
 
-    func isEmpty() -> Bool
+    public func isEmpty() -> Bool
     {
         return self.head == nil
     }
 
-    func enqueue(_ element: T)
+    public func enqueue(_ element: T)
     {
         if self.head == nil
         {
@@ -28,9 +28,9 @@ class Queue<T> {
         self.tail = self.tail!.getNext()
     }
 
-    func dequeue() throws  -> T
+    public func dequeue() throws  -> T
     {
-        guard (self.head != nil) else  { throw CommonManagedExceptions.IllegalStateException("Queue is empty") }
+        guard (self.head != nil) else  { throw IllegalStateException("Queue is empty") }
 
         let element = self.head!.getElement()
         self.head = self.head!.getNext()

@@ -1,5 +1,5 @@
 
-func testWhile()
+public func testWhile()
 {
     var count = 1
 
@@ -10,7 +10,7 @@ func testWhile()
     }
 }
 
-func testDoWhile()
+public func testDoWhile()
 {
     var count = 1
 

@@ -1,6 +1,7 @@
 package fr.jhelp.kotlinLightSamples
 
 import fr.jhelp.kotlinLight.guard
+import fr.jhelp.kotlinLigthTools.exceptions.IllegalStateException
 
 class Queue<T>
 {

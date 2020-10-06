@@ -1,28 +1,28 @@
 
 
-class AtomicLong {
+public class AtomicLong {
 
     private let mutex: Mutex
     private var value: Long
 
-    init(_ value: Long){
+    public init(_ value: Long){
         self.mutex = Mutex()
         self.value = value
     }
 
-    func get() -> Long
+    public func get() -> Long
     {
         var value = Long(0)
         self.mutex.safeExecute { value = self.value }
         return value
     }
 
-    func set(_ value: Long)
+    public func set(_ value: Long)
     {
         self.mutex.safeExecute { self.value = value }
     }
 
-    func getAndSet(_ newValue: Long) -> Long
+    public func getAndSet(_ newValue: Long) -> Long
     {
         var value = Long(0)
 
@@ -34,7 +34,7 @@ class AtomicLong {
         return value
     }
 
-    func compareAndSet(_ excepted: Long, _ newValue: Long) -> Bool
+    public func compareAndSet(_ excepted: Long, _ newValue: Long) -> Bool
     {
         var done = false
 
@@ -49,7 +49,7 @@ class AtomicLong {
         return done
     }
 
-    func incrementAndGet() -> Long
+    public func incrementAndGet() -> Long
     {
         var value = Long(0)
 
@@ -61,7 +61,7 @@ class AtomicLong {
         return value
     }
 
-    func getAndIncrement() -> Long
+    public func getAndIncrement() -> Long
     {
         var value = Long(0)
 
@@ -73,7 +73,7 @@ class AtomicLong {
         return value
     }
 
-    func decrementAndGet() -> Long
+    public func decrementAndGet() -> Long
     {
         var value = Long(0)
 
@@ -85,7 +85,7 @@ class AtomicLong {
         return value
     }
 
-    func getAndDecrement() -> Long
+    public func getAndDecrement() -> Long
     {
         var value = Long(0)
 

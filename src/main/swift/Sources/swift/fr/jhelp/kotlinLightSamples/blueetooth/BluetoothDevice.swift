@@ -1,4 +1,4 @@
 
-class BluetoothDevice {
+public class BluetoothDevice {
 
 }
