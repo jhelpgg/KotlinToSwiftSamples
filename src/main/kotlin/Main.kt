@@ -5,6 +5,7 @@ import fr.jhelp.kotlinLight.Try
 import fr.jhelp.kotlinLightSamples.Apple
 import fr.jhelp.kotlinLightSamples.Car
 import fr.jhelp.kotlinLightSamples.CompanionTest
+import fr.jhelp.kotlinLightSamples.EqualsTest
 import fr.jhelp.kotlinLightSamples.IntToString
 import fr.jhelp.kotlinLightSamples.Queue
 import fr.jhelp.kotlinLightSamples.Status
@@ -141,6 +142,9 @@ fun main()
     println("car1 : ${car1.model} ; ${car1.year}")
     println("car2 : ${car2.model} ; ${car2.year}")
 
+    val same = car1 == car2
+    println("same car : $same")
+
     testWhile()
     testDoWhile()
 
@@ -182,6 +186,15 @@ fun main()
     println("--------------------")
 
     promiseTest()
+
+    val test1 = EqualsTest("poire")
+    val test2 = EqualsTest("poire")
+    val test3 = EqualsTest("pear")
+    val equals1_2_call = test1.equals(test2)
+    val equals1_2 = test1 == test2
+    val equals1_3_call = test1.equals(test3)
+    val equals1_3 = test1 == test3
+    println("equals1_2_call=$equals1_2_call equals1_2=$equals1_2 equals1_3_call=$equals1_3_call equals1_3=$equals1_3")
 
     for (count in 0 until 10000000)
     {

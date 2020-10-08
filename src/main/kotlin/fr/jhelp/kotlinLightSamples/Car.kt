@@ -13,4 +13,15 @@ class Car : Vehicule
     {
         this.model = model
     }
+
+    override fun equals(other: Any?): Boolean
+    {
+        if (null == other || other !is Car)
+        {
+            return false
+        }
+
+        val otherCar = other!! as Car
+        return this.model == otherCar.model && this.year == otherCar.year
+    }
 }

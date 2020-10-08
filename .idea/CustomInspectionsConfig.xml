@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CustomInspectionsConfig">
+    <filetypeContainer regex=".*\.txt">
+      <element id="0">
+        <comment>Just do not write this.</comment>
+        <regex>Forbidden t.xt</regex>
+        <severity>Warning</severity>
+      </element>
+    </filetypeContainer>
+    <filetypeContainer regex=".*\.kt">
+      <element id="0">
+        <comment>when without else</comment>
+        <regex>when(?:\s*\(.*\))?\s*\{(?!(?:.|\s)*else\s*-&gt;(?:.|\s)*)(?:.|\s)*\}</regex>
+        <severity>Error</severity>
+      </element>
+      <element id="1">
+        <comment>No affectation in when</comment>
+        <regex>when\s*\(.*=.*\)</regex>
+        <severity>Error</severity>
+      </element>
+      <element id="2">
+        <comment>No affectation in if</comment>
+        <regex>if\s*\(.*[^=&lt;&gt;!]=[^=].*\)</regex>
+        <severity>Error</severity>
+      </element>
+    </filetypeContainer>
+  </component>
+</project>

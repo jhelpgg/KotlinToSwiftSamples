@@ -118,6 +118,9 @@ public func main()
     print("car1 : \(car1.model) ; \(car1.year)")
     print("car2 : \(car2.model) ; \(car2.year)")
 
+    let same = car1 == car2
+    print("same car : \(same)")
+
     testWhile()
     testDoWhile()
 
@@ -159,6 +162,15 @@ public func main()
     print(" -= 1 -= 1 -= 1 -= 1 -= 1 -= 1 -= 1 -= 1 -= 1 -= 1")
 
     promiseTest()
+
+    let test1 = EqualsTest("poire")
+    let test2 = EqualsTest("poire")
+    let test3 = EqualsTest("pear")
+    let equals1_2_call = test1.equals(test2)
+    let equals1_2 = test1 == test2
+    let equals1_3_call = test1.equals(test3)
+    let equals1_3 = test1 == test3
+    print("equals1_2_call=\(equals1_2_call) equals1_2=\(equals1_2) equals1_3_call=\(equals1_3_call) equals1_3=\(equals1_3)")
 
     for count in 0 ..< 10000000
     {
