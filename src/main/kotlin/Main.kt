@@ -10,6 +10,7 @@ import fr.jhelp.kotlinLightSamples.EqualsTest
 import fr.jhelp.kotlinLightSamples.IntToString
 import fr.jhelp.kotlinLightSamples.Queue
 import fr.jhelp.kotlinLightSamples.Status
+import fr.jhelp.kotlinLightSamples.ToString
 import fr.jhelp.kotlinLightSamples.promiseTest
 import fr.jhelp.kotlinLightSamples.readDouble
 import fr.jhelp.kotlinLightSamples.readFloat
@@ -140,8 +141,8 @@ fun main()
     val car1 = Car("DeLorean", 1985)
     val car2 = Car("Tesla")
 
-    println("car1 : ${car1.model} ; ${car1.year}")
-    println("car2 : ${car2.model} ; ${car2.year}")
+    println("car1 : ${car1.model} ; ${car1.year} / $car1")
+    println("car2 : ${car2.model} ; ${car2.year} / $car2")
 
     val same = car1 == car2
     println("same car : $same")
@@ -203,6 +204,9 @@ fun main()
     val compare2 = ComparableTest("youpi", 55)
     val lowerCompare = compare1 < compare2
     println("lowerCompare=$lowerCompare")
+
+    val toString = ToString()
+    println(toString)
 
     for (count in 0 until 10000000)
     {

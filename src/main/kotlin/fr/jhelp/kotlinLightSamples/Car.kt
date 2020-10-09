@@ -36,4 +36,9 @@ class Car : Vehicule, Comparable<Car>
 
         return this.model.compareTo(other.model)
     }
+
+    override fun toString(): String
+    {
+        return "My super car : ${this.model} on ${this.year}"
+    }
 }

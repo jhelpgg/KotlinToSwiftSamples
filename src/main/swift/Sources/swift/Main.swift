@@ -115,8 +115,8 @@ public func main()
     let car1 = Car("DeLorean", 1985)
     let car2 = Car("Tesla")
 
-    print("car1 : \(car1.model) ; \(car1.year)")
-    print("car2 : \(car2.model) ; \(car2.year)")
+    print("car1 : \(car1.model) ; \(car1.year) / \(car1)")
+    print("car2 : \(car2.model) ; \(car2.year) / \(car2)")
 
     let same = car1 == car2
     print("same car : \(same)")
@@ -178,6 +178,9 @@ public func main()
     let compare2 = ComparableTest("youpi", 55)
     let lowerCompare = compare1 < compare2
     print("lowerCompare=\(lowerCompare)")
+
+    let toString = ToString()
+    print(toString)
 
     for count in 0 ..< 10000000
     {

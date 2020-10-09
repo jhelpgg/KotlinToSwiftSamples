@@ -1,6 +1,9 @@
 
 public class Car : Vehicule, Comparable
-, Equatable {
+, Equatable , CustomStringConvertible {
+     public var description: String { return self.toString() }
+
+
      static public func < (lhs: Car, rhs: Car) -> Bool
      {
           return lhs.compareTo(rhs) < 0
@@ -48,5 +51,10 @@ public class Car : Vehicule, Comparable
         }
 
         return self.model.compareTo(other.model)
+    }
+
+    public func toString() -> String
+    {
+        return "My super car : \(self.model) on \(self.year)"
     }
 }
