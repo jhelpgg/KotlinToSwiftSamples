@@ -5,6 +5,7 @@ import fr.jhelp.kotlinLight.Try
 import fr.jhelp.kotlinLightSamples.Apple
 import fr.jhelp.kotlinLightSamples.Car
 import fr.jhelp.kotlinLightSamples.CompanionTest
+import fr.jhelp.kotlinLightSamples.ComparableTest
 import fr.jhelp.kotlinLightSamples.EqualsTest
 import fr.jhelp.kotlinLightSamples.IntToString
 import fr.jhelp.kotlinLightSamples.Queue
@@ -144,6 +145,8 @@ fun main()
 
     val same = car1 == car2
     println("same car : $same")
+    val lower = car1 < car2
+    println("lower car : $lower")
 
     testWhile()
     testDoWhile()
@@ -195,6 +198,11 @@ fun main()
     val equals1_3_call = test1.equals(test3)
     val equals1_3 = test1 == test3
     println("equals1_2_call=$equals1_2_call equals1_2=$equals1_2 equals1_3_call=$equals1_3_call equals1_3=$equals1_3")
+
+    val compare1 = ComparableTest("yoyo", 5)
+    val compare2 = ComparableTest("youpi", 55)
+    val lowerCompare = compare1 < compare2
+    println("lowerCompare=$lowerCompare")
 
     for (count in 0 until 10000000)
     {

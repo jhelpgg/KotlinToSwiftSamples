@@ -120,6 +120,8 @@ public func main()
 
     let same = car1 == car2
     print("same car : \(same)")
+    let lower = car1 < car2
+    print("lower car : \(lower)")
 
     testWhile()
     testDoWhile()
@@ -171,6 +173,11 @@ public func main()
     let equals1_3_call = test1.equals(test3)
     let equals1_3 = test1 == test3
     print("equals1_2_call=\(equals1_2_call) equals1_2=\(equals1_2) equals1_3_call=\(equals1_3_call) equals1_3=\(equals1_3)")
+
+    let compare1 = ComparableTest("yoyo", 5)
+    let compare2 = ComparableTest("youpi", 55)
+    let lowerCompare = compare1 < compare2
+    print("lowerCompare=\(lowerCompare)")
 
     for count in 0 ..< 10000000
     {

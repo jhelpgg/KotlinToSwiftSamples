@@ -1,6 +1,12 @@
 
-public class Car : Vehicule
+public class Car : Vehicule, Comparable
 , Equatable {
+     static public func < (lhs: Car, rhs: Car) -> Bool
+     {
+          return lhs.compareTo(rhs) < 0
+     }
+
+
      static public func == (lhs: Car, rhs: Car) -> Bool
      {
           return lhs.equals(rhs)
@@ -30,5 +36,17 @@ public class Car : Vehicule
 
         let otherCar = other as! Car
         return self.model == otherCar.model && self.year == otherCar.year
+    }
+
+    public func compareTo(_ other: Car) -> Int
+    {
+        let comparison = self.year - other.year
+
+        if comparison != 0
+        {
+            return comparison
+        }
+
+        return self.model.compareTo(other.model)
     }
 }
