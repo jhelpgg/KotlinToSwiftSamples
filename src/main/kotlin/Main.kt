@@ -11,6 +11,7 @@ import fr.jhelp.kotlinLightSamples.IntToString
 import fr.jhelp.kotlinLightSamples.Queue
 import fr.jhelp.kotlinLightSamples.Status
 import fr.jhelp.kotlinLightSamples.ToString
+import fr.jhelp.kotlinLightSamples.blueetooth.BluetoothFrame
 import fr.jhelp.kotlinLightSamples.promiseTest
 import fr.jhelp.kotlinLightSamples.readDouble
 import fr.jhelp.kotlinLightSamples.readFloat
@@ -207,6 +208,15 @@ fun main()
 
     val toString = ToString()
     println(toString)
+
+    var data = CommonList<Byte>()
+    // -2 : Int16 in little endian
+    data.append(0xFE.toByte())
+    data.append(0xFF.toByte())
+
+    val bluetoothFrame = BluetoothFrame(data)
+    val valueInt16 = bluetoothFrame.getInt16()
+    println("valueInt16 = $valueInt16")
 
     for (count in 0 until 10000000)
     {

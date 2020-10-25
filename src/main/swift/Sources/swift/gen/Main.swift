@@ -182,6 +182,15 @@ public func main()
     let toString = ToString()
     print(toString)
 
+    var data = Array<Byte>()
+    // -2 : Int16 in little endian
+    data.append(0xFE.toByte())
+    data.append(0xFF.toByte())
+
+    let bluetoothFrame = BluetoothFrame(data)
+    let valueInt16 = bluetoothFrame.getInt16()
+    print("valueInt16 = \(valueInt16)")
+
     for count in 0 ..< 10000000
     {
 

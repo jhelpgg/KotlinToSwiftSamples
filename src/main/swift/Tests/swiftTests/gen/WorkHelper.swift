@@ -107,7 +107,14 @@ public extension Int
 {
    func toByte() -> Byte
    {
-      return Byte(self)
+      let value = self & 0xFF
+
+      if(value > 0x7F)
+      {
+        return Byte(value - 0x100)
+      }
+
+      return Byte(value)
    }
 
    func toLong() -> Long

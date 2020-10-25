@@ -18,6 +18,21 @@ public class ByteStream
         return self.data.count - self.index
     }
 
+    func getPosition() -> Int
+    {
+        return self.index
+    }
+
+    func setPosition(_ index:Int)
+    {
+        self.index = index
+    }
+
+    func rewind()
+    {
+        self.index = 0
+    }
+
     func readInt8() -> Int
     {
         let data = self.readData(1)
@@ -26,8 +41,14 @@ public class ByteStream
 
     func readInt16() -> Int
     {
+        print("readInt16 step 1/4")
         let data = self.readData(2)
-        return Int(data.withUnsafeBytes { $0.load(fromByteOffset: 0, as: UInt16.self) })
+        print("readInt16 step 2/4")
+        let int16 : UInt16 = data.withUnsafeBytes { $0.load(fromByteOffset: 0, as: UInt16.self) }
+        print("readInt16 step 3/4 : int16 = \(int16)")
+        let result : Int = Int(int16)
+        print("readInt16 step 4/4 : result = \(result)")
+        return result
     }
 
     func readInt32() -> Int
